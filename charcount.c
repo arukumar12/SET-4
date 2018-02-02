@@ -2,13 +2,14 @@
 
 int main(void) {
 	int i,count=0;
-	char s[10];
-	for(i=0;i<10;i++)
-	scanf("%c",&s[i]);
-	for(i=0;i<10;i++)
+	char s[100];
+	scanf("%s",&s);
+	for(i=0;s[i]!='\0';i++)
 	{
 		if((s[i]>='a'||s[i]<='z')||(s[i]>='A'||s[i]<='Z'))
 		count++;
+		if(s[i]==' ')
+			count--;
 	}
 	printf("%d",count);
 	
